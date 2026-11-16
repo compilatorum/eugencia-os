@@ -1,0 +1,66 @@
+#+TITLE: Eugência OS — Research & Experiment OS
+#+SUBTITLE: Agentic Selfware & Verifiable Service Engineering
+#+DATE: 2026-11-16T13:43:35Z
+
+* 🔬 Questão Central
+Como transformar conhecimento, software e agentes de IA em serviços produtizados, preservando a autonomia criativa e assegurando qualidade, rastreabilidade e sustentabilidade econômica?
+
+* 🧪 Experimentos Ativos
+** ACTIVE [E-001] Eugência OS como Infraestrutura de Transição Profissional (Ergonomia = 2.6)
+   :PROPERTIES:
+   :ID:        exp:e001
+   :AXIS:      Eixo 1 & 2: Cognição Aumentada, Flow e Orquestração Humano-IA
+   :AUTONOMY:  0.82
+   :DELTA_A:   Repositório ~/eugencia-os + 72 ativos auditados + 9 docs estratégicos + sync Org-mode
+   :END:
+   - *Hipótese:* Um sistema híbrido (Emacs/Org + Web App Cytoscape.js) de captura, curadoria, execução supervisionada e publicação reduz o atrito entre exploração criativa e entregas verificáveis mantendo WIP <= 2.
+** ACTIVE [E-002] Card-Chat como AI Commerce Agent Verificável (Vespa TCG) (Ergonomia = 2.29)
+   :PROPERTIES:
+   :ID:        exp:e002
+   :AXIS:      Eixo 4: Service-as-a-Software e Productized Services
+   :AUTONOMY:  0.78
+   :DELTA_A:   Conector WhatsApp/MercadoPago + Policy Engine Comercial + Template Service-as-a-Software
+   :END:
+   - *Hipótese:* Operador comercial automatizado via WhatsApp com catálogo determinístico e ProofGate de desconto elimina alucinações comerciais e gera MRR imediato.
+** DESIGNED [E-003] ProofGate-as-a-Service & Grant Stacking Web3 (Ergonomia = 2.69)
+   :PROPERTIES:
+   :ID:        exp:e003
+   :AXIS:      Eixo 3 & 5: Harness Engineering, ProofGate e Financiamento Descentralizado
+   :AUTONOMY:  0.85
+   :DELTA_A:   SDK TypeScript ProofGate + Benchmark Adversarial + Matriz Grant Stacking
+   :END:
+   - *Hipótese:* Decompor o ProofGate em WP1-WP3 abertos (financiados por Grants) e WP4-WP5 proprietários (financiados por clientes B2B) maximiza capital intelectual sem dupla cobrança.
+
+* 🔒 Evidências Verificáveis (ProofGate SHA-256)
+** VERIFIED [EV-001] Auditoria e classificação A–F dos 72 repositórios GitHub (59 compilatorum + 13 smp-sandramariapereira)
+   :PROPERTIES:
+   :EXPERIMENT: E-001
+   :PROJECT:    Eugência OS
+   :WP:         WP0-PORTFOLIO
+   :ARTIFACT:   docs/eugencia-os/PORTFOLIO-ASSETS-REGISTER.md
+   :SHA256:     a19a68e9df5789369e335ca004489823f3647723c73136d61fea32b1c3fbf2c0
+   :END:
+** VERIFIED [EV-002] Implementação das 7 camadas VOS: Identity, Billing/Créditos, AI Gateway M*, Agents, Memory, Tools, ProofGate
+   :PROPERTIES:
+   :EXPERIMENT: E-001
+   :PROJECT:    ValueCurator OS
+   :WP:         WP1-VOS-CORE
+   :ARTIFACT:   backend/app/engine.py
+   :SHA256:     4dca5d7eeb33ec068fa6be2122980c455e4e3ff9e7858022a2e243b65158b30c
+   :END:
+** VERIFIED [EV-003] Fluxo comercial AI Commerce Agent (Vespa TCG) com guardrail determinístico de desconto e estoque
+   :PROPERTIES:
+   :EXPERIMENT: E-002
+   :PROJECT:    Card-Chat
+   :WP:         WP2-COMMERCE
+   :ARTIFACT:   docs/eugencia-os/PRODUCT-CATALOG.md
+   :SHA256:     69f05095f595dac793df808c60aee2fb178ca841c48201bddcde4b86ca5f77b7
+   :END:
+** VERIFIED [EV-004] Pipeline Intent -> Policy -> Validation -> Approval -> Execution -> Receipt em modo APPROVAL_ONLY
+   :PROPERTIES:
+   :EXPERIMENT: E-003
+   :PROJECT:    ProofGate
+   :WP:         WP3-PROOFGATE
+   :ARTIFACT:   docs/eugencia-os/VALUECURATOR-OS-SPEC.md
+   :SHA256:     d5400e8cb679450f407eb356634ad30703e91d6ceb8dee8ae3121374f35a14c0
+   :END:

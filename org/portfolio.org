@@ -1,0 +1,736 @@
+#+TITLE: Eugência OS — Portfolio OS (72 Repositórios & KPIs)
+#+DATE: 2026-11-16T13:43:35Z
+
+* 📊 Indicadores Executivos da Eugência (E = H + S + A + G)
+- *Score da Eugência (E):* 95.5 / 100
+- *MRR Atual:* R$ 3100.00 (3 clientes ativos)
+- *Margem de Contribuição (MC):* R$ 2340.77 (75.5%)
+- *Alavancagem Recorrente (L = MRR / Horas):* R$ 95.38 / hora humana
+- *Eficiência Computacional (rho = MRR / C_var):* 4.08x
+- *Regra WIP Comercial <= 2:* 2/2 (value-curator, card-chat)
+
+* 🏛️ Ativos por Prioridade e Cluster (72 Repositórios)
+** Prioridade P0 (2 repositórios)
+*** compilatorum/emacs [D — Internal Tool]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Produtividade interna e redução de atrito cognitivo
+    :NEXT_MILESTONE: Integrar modo eugencia-os.el com sincronização bidirecional Org <-> SQLite/FastAPI
+    :END:
+    - Potencial: Essencial para Ergonomia (Cockpit Cognitivo Emacs + Org-mode + Magit + HITL)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/harness-engineering [D — Internal Tool]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L3
+    :MONETIZATION:   Redução de horas humanas (aumento de Alavancagem L) + futuro Grant de Security/Tooling
+    :NEXT_MILESTONE: Reproduzir os +131 testes em ambiente limpo e padronizar templates de microsserviços (Dias 8–21)
+    :END:
+    - Potencial: Muito Alta como Fábrica Interna (Motor 3: Orquestração DAG, worktrees, memória, +131 testes)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+** Prioridade P1 (9 repositórios)
+*** compilatorum/concurseiro-grants [C — Commercial]
+    :PROPERTIES:
+    :CLUSTER:        GrantOS
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Captação própria de Grants + pacote comercial Grant Intelligence (Setup R$ 500–1.500 + R$ 150–500/mês)
+    :NEXT_MILESTONE: Alimentar módulo Opportunity Intelligence do Eugência OS e estruturar Grant Stacking do ProofGate
+    :END:
+    - Potencial: Alta (Sistema de inteligência de capital: Project -> FundingThesis -> Opportunity -> WorkPackage -> Evidence -> Funding)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/governaut-os [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        GrantOS
+    :STAGE:          Construct
+    :AUTONOMY:       L3
+    :MONETIZATION:   Grants de Governança DAO + consultoria/licenciamento para DAOs
+    :NEXT_MILESTONE: Reutilizar modelo de níveis de autonomia L0–L5 na governança do Eugência OS
+    :END:
+    - Potencial: Alta (Orquestração Multi-Agente L0–L5 para ciclo completo de DAO Proposals e governança Web4)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/omni-dual-brain [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L3
+    :MONETIZATION:   Infraestrutura base para AI Workflow Agent e AI Commerce Agent
+    :NEXT_MILESTONE: Utilizar como referência do Agent Runtime (Camada 4) e Tools Layer (Camada 6) do VOS
+    :END:
+    - Potencial: Alta (Cérebro Único com Duas Fronteiras: LangGraph + MCP + WhatsApp Debounce + Emacs HITL)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/oracle [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        ValueCurator
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Componente de infraestrutura interna / Core IP
+    :NEXT_MILESTONE: Integrar como provedor de validação e contexto verificável no ProofGate
+    :END:
+    - Potencial: Média/Alta (ORACLE·GEN: Computação Oracular Generativa e Kernel Epistemológico)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/value-curator [A — Core IP] :WIP_ACTIVE:
+    :PROPERTIES:
+    :CLUSTER:        ValueCurator
+    :STAGE:          Construct
+    :AUTONOMY:       L3
+    :MONETIZATION:   Licenciamento + API + Pilotos B2B (Agent Assurance) + Security/Solana Grants (WP1–WP3)
+    :NEXT_MILESTONE: Empacotar ProofGate API + SDK documentado + testes adversariais em modo APPROVAL_ONLY (Dias 56–75)
+    :END:
+    - Potencial: Muito Alta (Motor 2: ProofGate-as-a-Service — segurança, validação e governança de agentes)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/vc [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        ValueCurator
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Retenção de IP / Infraestrutura base da Holding
+    :NEXT_MILESTONE: Consolidar contratos de dados das 7 camadas do ValueCurator OS
+    :END:
+    - Potencial: Estratégico (Núcleo estratégico: ontologia, curadoria, governança e arquitetura VOS)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** smp-sandramariapereira/card-chat [C — Commercial] :WIP_ACTIVE:
+    :PROPERTIES:
+    :CLUSTER:        ValueCurator
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Setup (R$ 1.500–6.000) + Mensalidade (R$ 400–1.500) + Créditos de IA
+    :NEXT_MILESTONE: Resolver divergência Node.js vs Python, integrar ProofGate de descontos e MercadoPago (Dias 22–40)
+    :END:
+    - Potencial: Alta (Motor 1: AI Commerce Agent — Service-as-a-Software para Vespa TCG e varejo especializado)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/KAIROS-Engine [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        ValueCurator
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Core IP embarcado no ValueCurator OS
+    :NEXT_MILESTONE: Formalizar licenciamento e fronteira de IP entre Compilatorum e espaço compartilhado
+    :END:
+    - Potencial: Alta (Motor de execução e decisão multicapital KAIROS)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/valuecurator [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        ValueCurator
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Núcleo compartilhado VOS + Licenciamento B2B
+    :NEXT_MILESTONE: Alinhar titularidade jurídica/IP e extrair módulos para o ValueCurator OS (Dias 41–55)
+    :END:
+    - Potencial: Alta (Monorepo compartilhado ValueCurator + KAIROS-Engine + discovery-agent)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+** Prioridade P2 (18 repositórios)
+*** compilatorum/compilatum [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L1
+    :MONETIZATION:   Reutilização interna (Selfware) e Open Core
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média/Alta (Componente reutilizável de UI, ontologia ou engenharia cognitiva)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/DAO [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        GrantOS
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Indireta via ProofGate B2B para DAOs
+    :NEXT_MILESTONE: Manter como referência para clientes DAO do pacote ProofGate / Agent Assurance
+    :END:
+    - Potencial: Média (Estruturas de governança descentralizada e tesouraria)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/eidos-tokenization [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Licenciamento / Infraestrutura Web3 (Etapa 3)
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média (Tokenização de IP e ativos semânticos executáveis)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/farcaster-nexus [D — Internal Tool]
+    :PROPERTIES:
+    :CLUSTER:        GrantOS
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Aquisição orgânica de clientes, distribuição de bounties e Gitcoin Grants
+    :NEXT_MILESTONE: Conectar ao módulo Reputation & Publishing OS para radar semanal assistido (Dias 76–90)
+    :END:
+    - Potencial: Alta como Canal de Distribuição e Reputação (Interaction -> Contribution -> Evidence -> Recognition -> Funding)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/ip-nft [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Licenciamento / Infraestrutura Web3 (Etapa 3)
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média (Tokenização de IP e ativos semânticos executáveis)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/IPIT [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        GrantOS
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Grants de pesquisa e bens públicos digitais
+    :NEXT_MILESTONE: Documentar evidências para rodadas de financiamento comunitário (Gitcoin)
+    :END:
+    - Potencial: Média/Alta (Experimento de inteligência coletiva e atribuição de contribuições verificáveis)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/knowledge-weaver [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L1
+    :MONETIZATION:   Reutilização interna (Selfware) e Open Core
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média/Alta (Componente reutilizável de UI, ontologia ou engenharia cognitiva)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/lakehouse [D — Internal Tool]
+    :PROPERTIES:
+    :CLUSTER:        ValueCurator
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Pacote Data Intelligence (Setup + mensalidade) + Grants Filecoin/The Graph
+    :NEXT_MILESTONE: Servir como camada de persistência e memória (Camada 5) do ValueCurator OS
+    :END:
+    - Potencial: Alta (Lakehouse Multimodal com PostgreSQL + pgvector + pipelines ETL)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/maha-grid [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        GrantOS
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Grants de Bens Públicos e Ecossistema (W3F, Polkadot, Nouns, Gitcoin)
+    :NEXT_MILESTONE: Submeter propostas qualificadas via GrantOS mantendo separação estrita de escopo (Grant Stacking)
+    :END:
+    - Potencial: Alta para Grants (Governança Agêntica, Farcaster Mini App Frames v2, cadCAD, Kit de Grants W3F/Polkadot/Nouns)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/NaturalLanguageCognitiveArchitecture [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L1
+    :MONETIZATION:   Reutilização interna (Selfware) e Open Core
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média/Alta (Componente reutilizável de UI, ontologia ou engenharia cognitiva)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/neurocoder-pwa [C — Commercial]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Experiment
+    :AUTONOMY:       L2
+    :MONETIZATION:   AI Workflow / Engineering Agent (Setup + Mensalidade)
+    :NEXT_MILESTONE: Conectar ao AI Gateway do ValueCurator OS na Fase 3
+    :END:
+    - Potencial: Alta (Interface PWA para engenharia de IA e automação assistida)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/nft-gen [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Licenciamento / Infraestrutura Web3 (Etapa 3)
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média (Tokenização de IP e ativos semânticos executáveis)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/planner [D — Internal Tool]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Produtividade interna (Selfware)
+    :NEXT_MILESTONE: Incorporar conceitos de Self-Verbs ao Flow Inbox do Eugência OS
+    :END:
+    - Potencial: Média (Gestão visual de contexto Human-AI Pair Programming e Self-Verbs)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/promptcraft [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Developer Tooling Grants + AI Knowledge Agent
+    :NEXT_MILESTONE: Separar schemas públicos (Open Core para Developer Tooling Grants) do pipeline interno
+    :END:
+    - Potencial: Alta (Schemas reutilizáveis Open Core + pipeline privado de curadoria + extração comercial)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/proterol [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L1
+    :MONETIZATION:   Reutilização interna (Selfware) e Open Core
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média/Alta (Componente reutilizável de UI, ontologia ou engenharia cognitiva)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/sovereign-html-mockups [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L1
+    :MONETIZATION:   Reutilização interna (Selfware) e Open Core
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média/Alta (Componente reutilizável de UI, ontologia ou engenharia cognitiva)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/storybook-genui [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Construct
+    :AUTONOMY:       L1
+    :MONETIZATION:   Reutilização interna (Selfware) e Open Core
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média/Alta (Componente reutilizável de UI, ontologia ou engenharia cognitiva)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** smp-sandramariapereira/Coopetition [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        GrantOS
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Grants e pesquisa
+    :NEXT_MILESTONE: Extrair componentes reutilizáveis para Selfware
+    :END:
+    - Potencial: Média (Componente de governança e jogos cooperativos)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+** Prioridade P3 (43 repositórios)
+*** compilatorum/cadcad-explorer [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação / Arquivo
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Experimento Web3/DeFi estacionado)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/canvas [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/claude-para-investidores [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Adoção comunitária / Lead magnet para Capital Intelligence
+    :NEXT_MILESTONE: Catalogar templates no Promptcraft e manter como ativo de reputação
+    :END:
+    - Potencial: Média (Engenharia reversa e upgrade de prompts financeiros estruturados)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/cognitiv [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/cognitive-search-orchestrator [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa (Protótipo anterior consolidado no Eugência OS)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/context-planner-pwa [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa (Protótipo anterior consolidado no Eugência OS)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/Corpora [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/cult [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/defi-kingdom [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação / Arquivo
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Experimento Web3/DeFi estacionado)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/dfk-pecdoa-postman-cockpit [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação / Arquivo
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Experimento Web3/DeFi estacionado)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/gdrive-reorg [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/glyphtionary [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/holographic-synthesis [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/hypervision [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/InternaResources [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/invest-os [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Exploração comercial posterior (Fase P3)
+    :NEXT_MILESTONE: Manter estacionado comercialmente (WIP <= 2); reutilizar Policy Engine no ProofGate
+    :END:
+    - Potencial: Alta no longo prazo (Sistema adaptativo de suporte ao investidor Web3, KAIROS 8 capitais, econofísica)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/jagannatha-hora-re [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Pesquisa aberta / Reputação técnica
+    :NEXT_MILESTONE: Preservar no Laboratório de Exploração sem pressão de monetização imediata
+    :END:
+    - Potencial: Nicho/Pesquisa (Engenharia reversa de efemérides e ciclos temporais em Python/C++)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/kaelvive-reversa [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/links-vault [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/lottie-flow [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/lovable-command-center [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/molora [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa (Protótipo anterior consolidado no Eugência OS)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/monorepo [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa (Protótipo anterior consolidado no Eugência OS)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/neurosimbolic-trader [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Pesquisa / Uso interno
+    :NEXT_MILESTONE: Estacionado (P3) — usar apenas como caso de teste de mandatos restritivos no ProofGate
+    :END:
+    - Potencial: Média (Pesquisa neuro-simbólica aplicada a mercados)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/omni-laboratory [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Pesquisa / Selfware
+    :NEXT_MILESTONE: Manter no Laboratório de Exploração como fonte de insights para agentes
+    :END:
+    - Potencial: Média (Symbolic Operating System for Assisted Imagination via Gemini Omni)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/pixelcoin [B — Open Core]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Design system interno e vitrine técnica
+    :NEXT_MILESTONE: Reaproveitar componentes visuais no Portfolio OS
+    :END:
+    - Potencial: Média (Interface generativa de inteligência econômica, vetores SVG e MCP)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/portfolio [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/prompt-audiofeedback [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Grants de pesquisa aplicada
+    :NEXT_MILESTONE: Estacionado (P3)
+    :END:
+    - Potencial: Média (AROS Voice Kernel: Biofeedback Vocal Idiográfico para Google Play)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/regenerativo [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/SLM [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa (Protótipo anterior consolidado no Eugência OS)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/sovereign-budget [D — Internal Tool]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Construct
+    :AUTONOMY:       L2
+    :MONETIZATION:   Gestão financeira interna (Selfware)
+    :NEXT_MILESTONE: Utilizar para contabilidade interna de receitas, custos variáveis e margem de contribuição da Eugência
+    :END:
+    - Potencial: Média/Alta (Controle orçamentário soberano Beancount, Buffer Fiduciário >= 1.20x e DeFi Health Factor >= 1.50)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/uap-synthesis-project [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/uml-navigator [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        NeuroCoder
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa (Protótipo anterior consolidado no Eugência OS)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** compilatorum/web3-launchpad-pro [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        Capital Intelligence
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação / Arquivo
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Experimento Web3/DeFi estacionado)
+    - Governança IP: Espaço próprio (compilatorum): titularidade direta da holding intelectual Compilatorum.
+*** smp-sandramariapereira/aros-voice-kernel [A — Core IP]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Experiment
+    :AUTONOMY:       L1
+    :MONETIZATION:   Grants de pesquisa e inovação / App futuro
+    :NEXT_MILESTONE: Estacionado (P3) — preservar IP e avaliar editais de pesquisa em saúde/biofeedback
+    :END:
+    - Potencial: Média/Alta (Kernel mobile Kotlin de voz e biofeedback vocal)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/digital-twin [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Seed
+    :AUTONOMY:       L0
+    :MONETIZATION:   Pesquisa
+    :NEXT_MILESTONE: Estacionado (P3)
+    :END:
+    - Potencial: Baixa/Média no curto prazo (Projeto Dados Sintéticos e gêmeo digital)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/dupla-evolutiva [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/EduAtlas [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        GeoIA
+    :STAGE:          Seed
+    :AUTONOMY:       L0
+    :MONETIZATION:   Grants de impacto social
+    :NEXT_MILESTONE: Estacionado (P3)
+    :END:
+    - Potencial: Média (Mapeamento e atlas educacional)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/educacao-territorios [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        GeoIA
+    :STAGE:          Seed
+    :AUTONOMY:       L0
+    :MONETIZATION:   Grants educacionais / GovTech
+    :NEXT_MILESTONE: Estacionado (P3) — aguardar janela de edital público específico
+    :END:
+    - Potencial: Média (Inteligência territorial aplicada à educação)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/geoIA-UrbanFlow [E — Research]
+    :PROPERTIES:
+    :CLUSTER:        GeoIA
+    :STAGE:          Seed
+    :AUTONOMY:       L0
+    :MONETIZATION:   Editais de inovação urbana / Grants
+    :NEXT_MILESTONE: Estacionado (P3) — verificar titularidade e manter para editais de cidades inteligentes
+    :END:
+    - Potencial: Média (Plataforma de navegação para micromobilidade urbana sustentável)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/k-fofo [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/p-c-b-l-e [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.
+*** smp-sandramariapereira/structa-site [F — Archive]
+    :PROPERTIES:
+    :CLUSTER:        AROS
+    :STAGE:          Archive
+    :AUTONOMY:       L0
+    :MONETIZATION:   Preservação (Estacionado)
+    :NEXT_MILESTONE: Manter estacionado (Fase 0: Poda do Portfólio) até demanda específica
+    :END:
+    - Potencial: Baixa no curto prazo (Material experimental sem prioridade comercial imediata)
+    - Governança IP: Espaço compartilhado (smp-sandramariapereira): requer verificação formal de titularidade, coautoria e contrato antes de licenciamento exclusivo.

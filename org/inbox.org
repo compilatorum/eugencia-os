@@ -1,0 +1,81 @@
+#+TITLE: Eugência OS — Flow Inbox (Divergência <-> Convergência)
+#+AUTHOR: João Nitzsche (Compilatorum / ValueCurator)
+#+DATE: 2026-11-16T13:43:35Z
+#+STARTUP: overview
+#+TODO: FLOW(f) CURATED(c) IN_EXECUTION(e) | PROMOTED(p) PARKED(k) DONE(d)
+
+* 🌱 Laboratório de Exploração (Divergência Criativa)
+** CURATED Hipótese: Usar grafos de folksonomia do Farcaster para ranquear automaticamente elegibilidade de editais no GrantOS  :GrantOS:
+   :PROPERTIES:
+   :ID:       flw:002
+   :SOURCE:   emacs-org
+   :TYPE:     Hipótese de Pesquisa
+   :DEST:     Research & Experiment OS (E-003)
+   :AGENT:    Research IA
+   :CREATED:  2026-11-16T12:29:32Z
+   :END:
+** PARKED Explorar acoplamento entre PROTEROL e biofeedback vocal no AROS sem obrigação de monetização imediata  :AROS:
+   :PROPERTIES:
+   :ID:       flw:005
+   :SOURCE:   cockpit
+   :TYPE:     Ideia / Insight Criativo
+   :DEST:     Laboratório de Exploração (P3 Estacionado)
+   :AGENT:    Research IA
+   :CREATED:  2026-11-16T12:29:32Z
+   :END:
+
+* ⚙️ Linha de Execução (Convergência em Entregas)
+** PROMOTED Adaptar motor de políticas do value-curator para Bounty #B01 (Dework/Superteam Ed25519 Receipt)  :ValueCurator:
+   :PROPERTIES:
+   :ID:       flw:2478b635
+   :SOURCE:   cockpit
+   :TYPE:     Oportunidade Comercial / Financiamento
+   :DEST:     Opportunity Intelligence CRM
+   :AGENT:    Business Development IA
+   :CREATED:  2026-11-16T13:43:35Z
+   :END:
+** PROMOTED Adaptar motor de políticas do value-curator para Bounty #B01 (Dework/Superteam Ed25519 Receipt)  :ValueCurator:
+   :PROPERTIES:
+   :ID:       flw:c6fa977e
+   :SOURCE:   cockpit
+   :TYPE:     Oportunidade Comercial / Financiamento
+   :DEST:     Opportunity Intelligence CRM
+   :AGENT:    Business Development IA
+   :CREATED:  2026-11-16T13:34:34Z
+   :END:
+** PROMOTED Adaptar motor de políticas do value-curator para Bounty #B01 (Dework/Superteam Ed25519 Receipt)  :ValueCurator:
+   :PROPERTIES:
+   :ID:       flw:b862bd75
+   :SOURCE:   cockpit
+   :TYPE:     Oportunidade Comercial / Financiamento
+   :DEST:     Opportunity Intelligence CRM
+   :AGENT:    Business Development IA
+   :CREATED:  2026-11-16T13:08:38Z
+   :END:
+** IN_EXECUTION Integrar webhook de confirmação automática do PIX MercadoPago no Card-Chat da Vespa TCG  :ValueCurator:
+   :PROPERTIES:
+   :ID:       flw:001
+   :SOURCE:   cockpit
+   :TYPE:     Tarefa de Produto (P1)
+   :DEST:     Fase 2 — Card-Chat MVP
+   :AGENT:    Engineering IA
+   :CREATED:  2026-11-16T12:29:32Z
+   :END:
+** PROMOTED Oportunidade Superteam Earn: Solana AI Agent Security & Guardrails SDK Bounty  :ValueCurator:
+   :PROPERTIES:
+   :ID:       flw:003
+   :SOURCE:   github
+   :TYPE:     Oportunidade de Capital
+   :DEST:     Opportunity Intelligence CRM
+   :AGENT:    Business Development IA
+   :CREATED:  2026-11-16T12:29:32Z
+   :END:
+** IN_EXECUTION Extrair runner de testes isolados em worktrees do harness-engineering como template padrão de microsserviço  :NeuroCoder:
+   :PROPERTIES:
+   :ID:       flw:004
+   :SOURCE:   emacs-org
+   :TYPE:     Melhoria de Selfware (Delta A_t > 0)
+   :DEST:     Fase 1 — Fábrica Interna
+   :AGENT:    Engineering IA
+   :CREATED:  2026-11-16T12:29:32Z
+   :END:

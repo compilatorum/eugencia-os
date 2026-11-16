@@ -1,0 +1,181 @@
+{
+  "probe": {
+    "timestamp": "2026-11-16T13:43:07Z",
+    "endpoints_tested": [
+      {
+        "url": "https://api.dework.xyz/health",
+        "method": "GET",
+        "http_status": 500,
+        "reachable": false,
+        "response_preview": "\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>500 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered an error and could not comp"
+      },
+      {
+        "url": "https://api.dework.xyz/graphql",
+        "method": "POST",
+        "http_status": 500,
+        "reachable": false,
+        "response_preview": "\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>500 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered an error and could not comp"
+      },
+      {
+        "url": "https://earn.superteam.fun/api/listings?type=bounty",
+        "method": "GET",
+        "http_status": 200,
+        "reachable": true,
+        "response_preview": "[{\"id\":\"b9bb7618-20a9-4df8-ac79-4f26be59709e\",\"rewardAmount\":13000,\"deadline\":\"2026-12-13T22:59:59.000Z\",\"type\":\"bounty\",\"title\":\"The Raenest Global Bounty - Writing, Video & Animation Bounty\",\"token\":\"USDC\",\"winnersAnnouncedAt\":null,\"slug\""
+      }
+    ],
+    "strategy_applied": "Nível 1 (GitHub Issues <-> Dework Sync) + Nível 2 (Introspecção GraphQL Controlada) + Superteam/Gitcoin Multi-Channel",
+    "curated_bounties": [
+      {
+        "title": "[Dework/GitHub Sync #B01] Deterministic Policy Guardrail & Ed25519 Receipt Verifier for Solana Agents",
+        "platform": "Dework / Superteam Earn",
+        "channel_type": "Bounty",
+        "cluster": "ValueCurator",
+        "reward_brl": 9000.0,
+        "probability": 0.7,
+        "prep_hours": 10.0,
+        "deadline": "2026-11-29",
+        "funding_category": "OPEN_PUBLIC_GOODS",
+        "github_issue_url": "https://github.com/compilatorum/value-curator/issues/101",
+        "source_repo": "compilatorum/value-curator + compilatorum/vc",
+        "research_axis": "Eixo 3: Harness Engineering, Testes Experimentais e ProofGate",
+        "funding_line": "Linha 2 (Bounties) -> Linha 4 (IP Licenciável ProofGate)",
+        "adaptive_evolution": "Extrair o validador de recibos SHA-256/Ed25519 como SDK Open Core (WP1) enquanto retém o motor de políticas KAIROS (Classe A)."
+      },
+      {
+        "title": "[Dework/DAO #B02] Multi-Agent Governance Proposal Triage & cadCAD Risk Simulation (L0-L4)",
+        "platform": "Dework (DAO Ops)",
+        "channel_type": "Bounty",
+        "cluster": "GrantOS",
+        "reward_brl": 12000.0,
+        "probability": 0.65,
+        "prep_hours": 14.0,
+        "deadline": "2026-12-05",
+        "funding_category": "SHARED_INFRASTRUCTURE",
+        "github_issue_url": "https://github.com/compilatorum/governaut-os/issues/42",
+        "source_repo": "compilatorum/governaut-os + compilatorum/maha-grid",
+        "research_axis": "Eixo 2: Engenharia de Contexto, Grafos, Memória e Orquestração de Agentes",
+        "funding_line": "Linha 2 (Bounties DAO) -> Linha 3 (Grants de Governança W3F/Nouns)",
+        "adaptive_evolution": "Adaptar os agentes L0–L5 do governaut-os para emitir recibos ProofGate a cada recomendação de voto em DAO."
+      },
+      {
+        "title": "[Superteam Bounty #B03] Adversarial Prompt-Injection & Mandate Bypass Suite for DeFi Treasury Agents",
+        "platform": "Superteam Earn",
+        "channel_type": "Bounty",
+        "cluster": "NeuroCoder",
+        "reward_brl": 15000.0,
+        "probability": 0.55,
+        "prep_hours": 15.0,
+        "deadline": "2026-12-12",
+        "funding_category": "RESEARCH_AND_VALIDATION",
+        "github_issue_url": "https://github.com/compilatorum/harness-engineering/issues/88",
+        "source_repo": "compilatorum/harness-engineering + compilatorum/promptcraft",
+        "research_axis": "Eixo 3: Harness Engineering & Eixo 1: Ergonomia Humano-IA",
+        "funding_line": "Linha 2 (Bounties) + Linha 3 (Security Grants WP2)",
+        "adaptive_evolution": "Converter os +131 testes do harness-engineering em benchmark público de segurança agêntica para atrair clientes de Agent Assurance."
+      },
+      {
+        "title": "[Dework/Farcaster #B04] Folksonomy Graph & Verifiable Contribution Indexer (Frames v2 / Neynar)",
+        "platform": "Dework / Gitcoin",
+        "channel_type": "Bounty",
+        "cluster": "GrantOS",
+        "reward_brl": 7500.0,
+        "probability": 0.6,
+        "prep_hours": 9.0,
+        "deadline": "2026-12-08",
+        "funding_category": "OPEN_PUBLIC_GOODS",
+        "github_issue_url": "https://github.com/compilatorum/farcaster-nexus/issues/19",
+        "source_repo": "compilatorum/farcaster-nexus + compilatorum/IPIT + compilatorum/concurseiro-grants",
+        "research_axis": "Eixo 5: Reputação Verificável, Bounties, Grants e Financiamento Descentralizado",
+        "funding_line": "Linha 2 (Bounties) -> Linha 3 (Gitcoin Grants / RetroPGF)",
+        "adaptive_evolution": "Conectar o grafo social Farcaster diretamente ao Reputation & Publishing OS para provar impacto comunitário on-chain."
+      },
+      {
+        "title": "[B2B Service Bounty #B05] WhatsApp AI Commerce Operator com Catálogo Determinístico e Checkout PIX",
+        "platform": "B2B Direct / Vespa TCG",
+        "channel_type": "Customer",
+        "cluster": "ValueCurator",
+        "reward_brl": 6800.0,
+        "probability": 0.85,
+        "prep_hours": 10.0,
+        "deadline": "2026-11-25",
+        "funding_category": "COMMERCIAL_PRODUCT",
+        "github_issue_url": "https://github.com/smp-sandramariapereira/card-chat/issues/7",
+        "source_repo": "smp-sandramariapereira/card-chat + compilatorum/omni-dual-brain",
+        "research_axis": "Eixo 4: Service-as-a-Software e Productized Services & Eixo 6: Micro-Ventures",
+        "funding_line": "Linha 1 (Prestação de Serviços Productized / MRR Comercial)",
+        "adaptive_evolution": "Manter mensageria em Node.js/TS e extrair o roteamento de modelos e guardrail de descontos para o ValueCurator OS."
+      },
+      {
+        "title": "[Data Bounty #B06] Multimodal Lakehouse Adapter (pgvector + DuckDB/PostgreSQL) for Agentic RAG",
+        "platform": "Dework / Filecoin Orbit",
+        "channel_type": "Bounty",
+        "cluster": "ValueCurator",
+        "reward_brl": 8400.0,
+        "probability": 0.5,
+        "prep_hours": 12.0,
+        "deadline": "2026-12-19",
+        "funding_category": "SHARED_INFRASTRUCTURE",
+        "github_issue_url": "https://github.com/compilatorum/lakehouse/issues/14",
+        "source_repo": "compilatorum/lakehouse + compilatorum/oracle",
+        "research_axis": "Eixo 2: Engenharia de Contexto, Grafos e Memória Persistente",
+        "funding_line": "Linha 2 (Bounties) -> Linha 1 (Pacote Data Intelligence / AI Knowledge Agent)",
+        "adaptive_evolution": "Transformar os scripts ETL do lakehouse na Camada 5 (Memory & RAG) compartilhada por todos os produtos do ValueCurator OS."
+      }
+    ]
+  },
+  "e2e_steps": [
+    {
+      "step": 1,
+      "screen": "SCADA Portfolio OS",
+      "screenshot": "e2e_01_scada_portfolio_os.png",
+      "assertion": "72 repos loaded, WIP=2/2 verified"
+    },
+    {
+      "step": 2,
+      "screen": "Flow Inbox & Equipe Humano-IA",
+      "screenshot": "e2e_02_flow_inbox_equipe_ia.png",
+      "assertion": "Bounty #B01 captured & routed to Engineering IA"
+    },
+    {
+      "step": 3,
+      "screen": "ValueCurator OS (AI Gateway & ProofGate)",
+      "screenshot": "e2e_03_ai_gateway_proofgate.png",
+      "assertion": "Model M* routed & SHA-256 ProofGate receipt generated"
+    },
+    {
+      "step": 4,
+      "screen": "Motor 1: Card-Chat AI Commerce Agent",
+      "screenshot": "e2e_04_card_chat_commerce_agent.png",
+      "assertion": "PIX checkout link generated & adversarial discount blocked"
+    },
+    {
+      "step": 5,
+      "screen": "GrantOS, Dework Bounties & Grant Stacking",
+      "screenshot": "e2e_05_grantos_dework_bounties.png",
+      "assertion": "12 opportunities ranked by EV/h & WP1-WP5 verified"
+    },
+    {
+      "step": 6,
+      "screen": "Research OS, Build in Public & 9 Strategic Docs",
+      "screenshot": "e2e_06_research_publishing_docs.png",
+      "assertion": "E-001..E-003 active & 9 markdown docs verified"
+    },
+    {
+      "mermaid_rendered": "mermaid_1_arquitetura_fluxo.png",
+      "size_bytes": 101947
+    },
+    {
+      "mermaid_rendered": "mermaid_2_bounties_pesquisa_financiamento.png",
+      "size_bytes": 83705
+    },
+    {
+      "mermaid_rendered": "mermaid_3_ciclo_adaptativo_repos.png",
+      "size_bytes": 24360
+    },
+    {
+      "mermaid_rendered": "mermaid_4_sequencia_e2e_proofgate.png",
+      "size_bytes": 68936
+    }
+  ]
+}

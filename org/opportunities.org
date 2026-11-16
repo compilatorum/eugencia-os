@@ -1,0 +1,203 @@
+#+TITLE: Eugência OS — Opportunity Intelligence & GrantOS
+#+DATE: 2026-11-16T13:43:35Z
+#+TODO: QUALIFIED(q) PREPARING(p) ACTIVE_PILOT(a) | SUBMITTED(s) WON(w) ARCHIVED(x)
+
+* 🎯 Oportunidades Qualificadas (Clientes B2B, Grants & Bounties)
+** QUALIFIED [Dework/GitHub Sync #B01] Deterministic Policy Guardrail & Ed25519 Receipt Verifier for Solana Agents (EV: R$ 6300 | R$ 630/h)
+   DEADLINE: <2026-11-29>
+   :PROPERTIES:
+   :ID:               opp:c01c03d5
+   :PLATFORM:         Dework / Superteam Earn
+   :CHANNEL:          Bounty
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       9000.0
+   :PROBABILITY:      0.7
+   :PREP_HOURS:       10.0
+   :FUNDING_CATEGORY: OPEN_PUBLIC_GOODS
+   :GITHUB_ISSUE:     https://github.com/compilatorum/value-curator/issues/101
+   :END:
+** QUALIFIED [B2B Service Bounty #B05] WhatsApp AI Commerce Operator com Catálogo Determinístico e Checkout PIX (EV: R$ 5780 | R$ 578/h)
+   DEADLINE: <2026-11-25>
+   :PROPERTIES:
+   :ID:               opp:26f1d92f
+   :PLATFORM:         B2B Direct / Vespa TCG
+   :CHANNEL:          Customer
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       6800.0
+   :PROBABILITY:      0.85
+   :PREP_HOURS:       10.0
+   :FUNDING_CATEGORY: COMMERCIAL_PRODUCT
+   :GITHUB_ISSUE:     https://github.com/smp-sandramariapereira/card-chat/issues/7
+   :END:
+** QUALIFIED Superteam Earn — Solana Agent Guardrails & Verifiable Policy SDK (EV: R$ 11250 | R$ 562/h)
+   DEADLINE: <2026-12-10>
+   :PROPERTIES:
+   :ID:               opp:002
+   :PLATFORM:         Superteam Earn
+   :CHANNEL:          Grant
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       25000.0
+   :PROBABILITY:      0.45
+   :PREP_HOURS:       20.0
+   :FUNDING_CATEGORY: OPEN_PUBLIC_GOODS
+   :GITHUB_ISSUE:     https://github.com/compilatorum/value-curator/issues/1
+   :END:
+** QUALIFIED [Dework/DAO #B02] Multi-Agent Governance Proposal Triage & cadCAD Risk Simulation (L0-L4) (EV: R$ 7800 | R$ 557/h)
+   DEADLINE: <2026-12-05>
+   :PROPERTIES:
+   :ID:               opp:e5161422
+   :PLATFORM:         Dework (DAO Ops)
+   :CHANNEL:          Bounty
+   :CLUSTER:          GrantOS
+   :REWARD_BRL:       12000.0
+   :PROBABILITY:      0.65
+   :PREP_HOURS:       14.0
+   :FUNDING_CATEGORY: SHARED_INFRASTRUCTURE
+   :GITHUB_ISSUE:     https://github.com/compilatorum/governaut-os/issues/42
+   :END:
+** QUALIFIED [Superteam Bounty #B03] Adversarial Prompt-Injection & Mandate Bypass Suite for DeFi Treasury Agents (EV: R$ 8250 | R$ 550/h)
+   DEADLINE: <2026-12-12>
+   :PROPERTIES:
+   :ID:               opp:356da603
+   :PLATFORM:         Superteam Earn
+   :CHANNEL:          Bounty
+   :CLUSTER:          NeuroCoder
+   :REWARD_BRL:       15000.0
+   :PROBABILITY:      0.55
+   :PREP_HOURS:       15.0
+   :FUNDING_CATEGORY: RESEARCH_AND_VALIDATION
+   :GITHUB_ISSUE:     https://github.com/compilatorum/harness-engineering/issues/88
+   :END:
+** QUALIFIED [Dework/Farcaster #B04] Folksonomy Graph & Verifiable Contribution Indexer (Frames v2 / Neynar) (EV: R$ 4500 | R$ 500/h)
+   DEADLINE: <2026-12-08>
+   :PROPERTIES:
+   :ID:               opp:9576850e
+   :PLATFORM:         Dework / Gitcoin
+   :CHANNEL:          Bounty
+   :CLUSTER:          GrantOS
+   :REWARD_BRL:       7500.0
+   :PROBABILITY:      0.6
+   :PREP_HOURS:       9.0
+   :FUNDING_CATEGORY: OPEN_PUBLIC_GOODS
+   :GITHUB_ISSUE:     https://github.com/compilatorum/farcaster-nexus/issues/19
+   :END:
+** ACTIVE_PILOT Piloto B2B Agent Assurance — DAO Treasury Policy Engine (APPROVAL_ONLY) (EV: R$ 8250 | R$ 458/h)
+   DEADLINE: <2026-12-15>
+   :PROPERTIES:
+   :ID:               opp:006
+   :PLATFORM:         B2B Direct
+   :CHANNEL:          Licensing
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       15000.0
+   :PROBABILITY:      0.55
+   :PREP_HOURS:       18.0
+   :FUNDING_CATEGORY: COMMERCIAL_PRODUCT
+   :GITHUB_ISSUE:     https://github.com/compilatorum/vc/issues/1
+   :END:
+** QUALIFIED Security Grant — Adversarial Testing Benchmark for Autonomous DeFi Agents (EV: R$ 7200 | R$ 450/h)
+   DEADLINE: <2026-12-20>
+   :PROPERTIES:
+   :ID:               opp:003
+   :PLATFORM:         Superteam Earn
+   :CHANNEL:          Grant
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       18000.0
+   :PROBABILITY:      0.4
+   :PREP_HOURS:       16.0
+   :FUNDING_CATEGORY: RESEARCH_AND_VALIDATION
+   :GITHUB_ISSUE:     https://github.com/compilatorum/harness-engineering/issues/1
+   :END:
+** PREPARING Gitcoin Grants — Farcaster Commons Lab & Verifiable Contributions (IPIT) (EV: R$ 6000 | R$ 429/h)
+   DEADLINE: <2026-12-18>
+   :PROPERTIES:
+   :ID:               opp:004
+   :PLATFORM:         Gitcoin Grants
+   :CHANNEL:          Grant
+   :CLUSTER:          GrantOS
+   :REWARD_BRL:       12000.0
+   :PROBABILITY:      0.5
+   :PREP_HOURS:       14.0
+   :FUNDING_CATEGORY: OPEN_PUBLIC_GOODS
+   :GITHUB_ISSUE:     https://github.com/compilatorum/concurseiro-grants/issues/1
+   :END:
+** ACTIVE_PILOT Vespa TCG — Implantação AI Commerce Agent (WhatsApp + Catálogo + PIX) (EV: R$ 4960 | R$ 413/h)
+   DEADLINE: <2026-11-30>
+   :PROPERTIES:
+   :ID:               opp:001
+   :PLATFORM:         B2B Direct
+   :CHANNEL:          Customer
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       6200.0
+   :PROBABILITY:      0.8
+   :PREP_HOURS:       12.0
+   :FUNDING_CATEGORY: COMMERCIAL_PRODUCT
+   :GITHUB_ISSUE:     https://github.com/smp-sandramariapereira/card-chat/issues/1
+   :END:
+** QUALIFIED [Data Bounty #B06] Multimodal Lakehouse Adapter (pgvector + DuckDB/PostgreSQL) for Agentic RAG (EV: R$ 4200 | R$ 350/h)
+   DEADLINE: <2026-12-19>
+   :PROPERTIES:
+   :ID:               opp:08c85e09
+   :PLATFORM:         Dework / Filecoin Orbit
+   :CHANNEL:          Bounty
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       8400.0
+   :PROBABILITY:      0.5
+   :PREP_HOURS:       12.0
+   :FUNDING_CATEGORY: SHARED_INFRASTRUCTURE
+   :GITHUB_ISSUE:     https://github.com/compilatorum/lakehouse/issues/14
+   :END:
+** QUALIFIED Dework/GitHub Sync — Implementação de Adaptador Pyth Price Feed em Rust/TS (EV: R$ 2700 | R$ 338/h)
+   DEADLINE: <2026-11-28>
+   :PROPERTIES:
+   :ID:               opp:005
+   :PLATFORM:         Dework/GitHub
+   :CHANNEL:          Bounty
+   :CLUSTER:          ValueCurator
+   :REWARD_BRL:       4500.0
+   :PROBABILITY:      0.6
+   :PREP_HOURS:       8.0
+   :FUNDING_CATEGORY: SHARED_INFRASTRUCTURE
+   :GITHUB_ISSUE:     https://github.com/compilatorum/value-curator/issues/2
+   :END:
+
+* 🧩 Grant Stacking — Work Packages (ProofGate / ValueCurator)
+** TODO [WP1] SDK TypeScript aberto de especificação de intents e políticas (OPEN_PUBLIC_GOODS)
+   :PROPERTIES:
+   :ID:       wp:proofgate-1
+   :LICENSE:  MIT
+   :FUNDER:   Developer Tooling Grant (Superteam)
+   :AMOUNT:   R$ 15000
+   :STATUS:   ready_for_grant
+   :END:
+** TODO [WP2] Suíte aberta de testes adversariais para agentes autônomos (RESEARCH_AND_VALIDATION)
+   :PROPERTIES:
+   :ID:       wp:proofgate-2
+   :LICENSE:  Apache-2.0
+   :FUNDER:   Security Grant
+   :AMOUNT:   R$ 18000
+   :STATUS:   in_progress
+   :END:
+** TODO [WP3] Adaptadores on-chain Solana (Anchor + Pyth + Jupiter Read-Only) (SHARED_INFRASTRUCTURE)
+   :PROPERTIES:
+   :ID:       wp:proofgate-3
+   :LICENSE:  Apache-2.0
+   :FUNDER:   Solana Ecosystem Grant
+   :AMOUNT:   R$ 20000
+   :STATUS:   ready_for_grant
+   :END:
+** TODO [WP4] API Hospedada Comercial Multi-Tenant com AI Gateway (COMMERCIAL_PRODUCT)
+   :PROPERTIES:
+   :ID:       wp:proofgate-4
+   :LICENSE:  Proprietária (ValueCurator)
+   :FUNDER:   Clientes B2B (Assinatura + Créditos)
+   :AMOUNT:   R$ 18000
+   :STATUS:   active_commercial
+   :END:
+** TODO [WP5] Dashboard Proprietário de Auditoria e Aprovação HITL (COMMERCIAL_PRODUCT)
+   :PROPERTIES:
+   :ID:       wp:proofgate-5
+   :LICENSE:  Proprietária (ValueCurator)
+   :FUNDER:   Receita Comercial & Licenciamento
+   :AMOUNT:   R$ 12000
+   :STATUS:   active_commercial
+   :END:
