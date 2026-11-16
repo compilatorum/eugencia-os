@@ -165,6 +165,40 @@ def dispatch_api_request(method: str, path: str, query: Dict[str, list], body: D
                 high_stakes_domain=bool(body.get("high_stakes_domain", False)),
             )
 
+        if method == "GET" and path == "/api/crm/pipeline":
+            return 200, engine.get_crm_pipeline_and_sprints()
+
+        if method == "POST" and path == "/api/crm/score":
+            return 200, engine.score_opportunity(
+                fit_f=float(body.get("fit_f", 85.0)),
+                remuneration_r=float(body.get("remuneration_r", 80.0)),
+                accumulation_a=float(body.get("accumulation_a", 90.0)),
+                ergonomics_e=float(body.get("ergonomics_e", 75.0)),
+                portfolio_p=float(body.get("portfolio_p", 85.0)),
+                purpose_c=float(body.get("purpose_c", 90.0)),
+                passes_risk_gate=bool(body.get("passes_risk_gate", True)),
+                passes_verified_budget_gate=bool(body.get("passes_verified_budget_gate", True)),
+            )
+
+        if method == "POST" and path == "/api/crm/advance":
+            return 200, engine.advance_crm_deal_stage(
+                deal_id=body["deal_id"],
+                target_stage=body["target_stage"],
+                extracted_delta_s=body.get("extracted_delta_s"),
+            )
+
+        if method == "POST" and path == "/api/services/price-quote":
+            return 200, engine.calculate_sprint_price(
+                prod_cost_brl=float(body.get("prod_cost_brl", 1200.0)),
+                risk_cost_brl=float(body.get("risk_cost_brl", 400.0)),
+                infra_cost_brl=float(body.get("infra_cost_brl", 150.0)),
+                target_margin_brl=float(body.get("target_margin_brl", 1000.0)),
+                platform_fee_pct=float(body.get("platform_fee_pct", 0.0)),
+            )
+
+        if method == "GET" and path == "/api/portfolio/readiness":
+            return 200, engine.get_portfolio_readiness()
+
         return 404, {"error": f"Endpoint {method} {path} not found"}
     except Exception as exc:
         return 400, {"error": str(exc)}

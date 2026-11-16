@@ -1,5 +1,5 @@
 #+TITLE: Eugência OS — Opportunity Intelligence & GrantOS
-#+DATE: 2026-11-16T13:43:35Z
+#+DATE: 2026-11-16T18:55:49Z
 #+TODO: QUALIFIED(q) PREPARING(p) ACTIVE_PILOT(a) | SUBMITTED(s) WON(w) ARCHIVED(x)
 
 * 🎯 Oportunidades Qualificadas (Clientes B2B, Grants & Bounties)

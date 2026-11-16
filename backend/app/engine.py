@@ -333,6 +333,22 @@ class EugenciaEngine:
                     version INTEGER NOT NULL DEFAULT 1,
                     created_at TEXT NOT NULL
                 );
+
+                CREATE TABLE IF NOT EXISTS crm_pipeline_deals (
+                    id TEXT PRIMARY KEY,
+                    title TEXT NOT NULL,
+                    client_or_dao TEXT NOT NULL,
+                    source_channel TEXT NOT NULL,
+                    sprint_code TEXT NOT NULL,
+                    stage TEXT NOT NULL,
+                    score_s REAL NOT NULL,
+                    passes_risk_gate INTEGER NOT NULL DEFAULT 1,
+                    passes_verified_budget_gate INTEGER NOT NULL DEFAULT 1,
+                    price_brl REAL NOT NULL,
+                    currency TEXT NOT NULL,
+                    reusable_delta_s TEXT NOT NULL,
+                    updated_at TEXT NOT NULL
+                );
                 """
             )
 
@@ -611,6 +627,17 @@ class EugenciaEngine:
             ]
             conn.executemany(
                 "INSERT INTO catalog_items VALUES (?, ?, ?, ?, ?, ?)", catalog
+            )
+
+            # 14. Seed 9-Stage CRM Pipeline Deals (Discover -> Qualify -> Scope -> Propose -> Contract -> Deliver -> Accept -> Invoice -> Learn)
+            crm_deals = [
+                ("crm:001", "Vespa TCG — Operador WhatsApp + Catálogo + PIX", "Vespa TCG BH", "B2B Direct", "SPR-03", "Deliver", 86.5, 1, 1, 2650.0, "BRL_PIX", "Conector WhatsApp/MercadoPago + Guardrail Desconto ProofGate", ts),
+                ("crm:002", "Solana Agent Policy Guardrail & Ed25519 Receipt SDK", "Superteam / Solana Ecosystem", "Superteam Earn", "SPR-07", "Propose", 84.0, 1, 1, 9000.0, "USDC", "SDK TypeScript Open Core (WP1) + Verificador SHA-256/Ed25519", ts),
+                ("crm:003", "DAO Proposal Triage Copilot (L0-L4)", "Governaut DAO Ops", "Dework", "SPR-08", "Scope", 79.5, 1, 1, 5200.0, "USDC", "Template de Triagem Multi-Agente L0-L4 + Simulador de Risco", ts),
+                ("crm:004", "Adversarial Prompt-Injection Benchmark Suite", "DeFi Treasury Guard", "Superteam Earn", "SPR-06", "Qualify", 77.0, 1, 1, 4500.0, "USDC", "Dataset de 50 ataques adversariais + Runner isolado em worktree", ts),
+            ]
+            conn.executemany(
+                "INSERT INTO crm_pipeline_deals VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", crm_deals
             )
 
     # -------------------------------------------------------------------------
@@ -1664,3 +1691,256 @@ class EugenciaEngine:
             "requirements_traceability_matrix": requirements,
             "fidelity_score_F": fidelity_f,
         }
+
+    # -------------------------------------------------------------------------
+    # Cryptojobs, Sprints, Opportunity Scoring S(o), Portfolio Readiness & 9-Stage CRM
+    # -------------------------------------------------------------------------
+    def score_opportunity(
+        self,
+        fit_f: float,
+        remuneration_r: float,
+        accumulation_a: float,
+        ergonomics_e: float,
+        portfolio_p: float,
+        purpose_c: float,
+        passes_risk_gate: bool = True,
+        passes_verified_budget_gate: bool = True,
+    ) -> Dict[str, Any]:
+        """
+        Implements Opportunity Compatibility Score (Section 10.1):
+        S(o) = 0.25*F + 0.20*R + 0.20*A + 0.15*E + 0.10*P + 0.10*C  in [0, 100]
+        With two mandatory eliminatory filters (kill-switches):
+          1. passes_risk_gate (No uncertified formal smart-contract auditing or third-party fund custody)
+          2. passes_verified_budget_gate (Confirmed budget, identifiable payer, acceptance criteria & deadline)
+        """
+        f_v = max(0.0, min(100.0, fit_f))
+        r_v = max(0.0, min(100.0, remuneration_r))
+        a_v = max(0.0, min(100.0, accumulation_a))
+        e_v = max(0.0, min(100.0, ergonomics_e))
+        p_v = max(0.0, min(100.0, portfolio_p))
+        c_v = max(0.0, min(100.0, purpose_c))
+
+        raw_score = round(
+            0.25 * f_v + 0.20 * r_v + 0.20 * a_v + 0.15 * e_v + 0.10 * p_v + 0.10 * c_v,
+            2,
+        )
+
+        if not passes_risk_gate:
+            status = "DISQUALIFIED_BY_RISK"
+            recommendation = "BLOQUEADO (Filtro Eliminatório 1): Exige responsabilidade financeira/custódia ou auditoria formal fora do escopo seguro atual."
+            effective_score = 0.0
+        elif not passes_verified_budget_gate:
+            status = "UNVERIFIED_LEAD"
+            recommendation = "RETIDO (Filtro Eliminatório 2): Alto score técnico, mas sem orçamento/pagador/critério de aceite verificados. Não alocar WIP."
+            effective_score = raw_score
+        elif raw_score >= 75.0:
+            status = "PRIORITY_EXECUTE"
+            recommendation = "PRIORIDADE ALTA (S >= 75): Avançar imediatamente no pipeline CRM (respeitando WIP_comercial <= 2)."
+            effective_score = raw_score
+        elif raw_score >= 60.0:
+            status = "TACTICAL_BACKLOG"
+            recommendation = "BACKLOG TÁTICO (60 <= S < 75): Executar como gig amortecedor de caixa se houver capacidade ociosa."
+            effective_score = raw_score
+        else:
+            status = "DECLINE_OR_ARCHIVE"
+            recommendation = "DECLINAR (S < 60): Retorno insuficiente frente ao custo de oportunidade do Selfware."
+            effective_score = raw_score
+
+        return {
+            "formula": "S(o) = 0.25*F + 0.20*R + 0.20*A + 0.15*E + 0.10*P + 0.10*C",
+            "components": {
+                "F_technical_fit": f_v,
+                "R_remuneration_margin": r_v,
+                "A_selfware_accumulation": a_v,
+                "E_ergonomics_effort": e_v,
+                "P_portfolio_pow": p_v,
+                "C_purpose_alignment": c_v,
+            },
+            "eliminatory_filters": {
+                "passes_risk_gate": passes_risk_gate,
+                "passes_verified_budget_gate": passes_verified_budget_gate,
+            },
+            "raw_score": raw_score,
+            "effective_score": effective_score,
+            "decision_status": status,
+            "recommendation": recommendation,
+        }
+
+    def calculate_sprint_price(
+        self,
+        prod_cost_brl: float,
+        risk_cost_brl: float,
+        infra_cost_brl: float,
+        target_margin_brl: float,
+        platform_fee_pct: float = 0.0,
+    ) -> Dict[str, Any]:
+        """
+        Implements Section 7.2 Pricing Formula:
+        P = C_producao + C_risco + C_infra + M_desejada (+ platform escrow fee adjustment)
+        """
+        base_price = round(prod_cost_brl + risk_cost_brl + infra_cost_brl + target_margin_brl, 2)
+        fee_clamped = max(0.0, min(50.0, platform_fee_pct))
+        final_price = round(base_price / (1.0 - fee_clamped / 100.0), 2) if fee_clamped > 0 else base_price
+        platform_fee_brl = round(final_price - base_price, 2)
+
+        return {
+            "formula": "P = C_producao + C_risco + C_infra + M_desejada + T_plataforma",
+            "breakdown_brl": {
+                "C_producao": prod_cost_brl,
+                "C_risco": risk_cost_brl,
+                "C_infra": infra_cost_brl,
+                "M_desejada": target_margin_brl,
+                "T_plataforma": platform_fee_brl,
+            },
+            "base_price_brl": base_price,
+            "final_quoted_price_brl": final_price,
+            "double_payment_rule": "Delta S = Componente reutilizável + Teste + Documentação + Aprendizado",
+        }
+
+    def get_portfolio_readiness(self) -> Dict[str, Any]:
+        """
+        Implements Section 8.1 & 8.2:
+        6 Proof-of-Work Showcase Cases (Case 01 .. Case 06) and Portfolio Readiness metric:
+        Portfolio Readiness = sum(w_i * L_i) / (5 * sum(w_i))
+        """
+        cases = [
+            {
+                "id": "CASE-01",
+                "name": "01 — AI Commerce Operator (Vespa TCG)",
+                "demo": "Agente consulta catálogo real, verifica estoque, valida desconto no ProofGate e gera link PIX MercadoPago",
+                "cryptojob_proved": "AI Agent Developer / API Integration",
+                "repo": "smp-sandramariapereira/card-chat + compilatorum/eugencia-os",
+                "level_L": 3,
+                "level_label": "L3 — Integração Funcional E2E",
+                "weight": 1.5,
+                "sprint_offer": "SPR-03 (AI Workflow & Copilot Sprint)",
+            },
+            {
+                "id": "CASE-02",
+                "name": "02 — ProofGate Adversarial Assurance",
+                "demo": "Agente tenta executar ações permitidas e proibidas (desconto >25%, buffer <1.20x); ProofGate bloqueia e emite recibo SHA-256",
+                "cryptojob_proved": "Agent Security / QA Evaluator",
+                "repo": "compilatorum/value-curator + compilatorum/harness-engineering",
+                "level_L": 3,
+                "level_label": "L3 — Integração Funcional + 131 Testes",
+                "weight": 1.5,
+                "sprint_offer": "SPR-07 (ProofGate Readiness Sprint)",
+            },
+            {
+                "id": "CASE-03",
+                "name": "03 — DAO Governance Copilot (L0–L4)",
+                "demo": "Proposta DAO passa por pesquisa, triagem multi-agente, simulação de risco e aprovação humana",
+                "cryptojob_proved": "DAO Operations / Governance Tooling",
+                "repo": "compilatorum/governaut-os + compilatorum/maha-grid",
+                "level_L": 2,
+                "level_label": "L2 — Testes Reproduzíveis",
+                "weight": 1.0,
+                "sprint_offer": "SPR-08 (DAO Governance Automation Sprint)",
+            },
+            {
+                "id": "CASE-04",
+                "name": "04 — GrantOS & Opportunity Intelligence",
+                "demo": "Oportunidade é capturada, avaliada por S(o) e EV/h e decomposta em Work Packages (WP1–WP5) sem dupla cobrança",
+                "cryptojob_proved": "Grant Operations / Ecosystem Research",
+                "repo": "compilatorum/concurseiro-grants + compilatorum/eugencia-os",
+                "level_L": 3,
+                "level_label": "L3 — Integração Funcional no Cockpit",
+                "weight": 1.0,
+                "sprint_offer": "SPR-09 (Grant Intelligence & Stacking Sprint)",
+            },
+            {
+                "id": "CASE-05",
+                "name": "05 — On-Chain & Sovereign Data Lakehouse",
+                "demo": "Dados financeiros e on-chain coletados em PostgreSQL/pgvector e exibidos em painel termodinâmico (Health Factor / Buffer)",
+                "cryptojob_proved": "Data Engineer / Analytics & BI",
+                "repo": "compilatorum/lakehouse + compilatorum/sovereign-budget",
+                "level_L": 2,
+                "level_label": "L2 — Testes e Dashboards Reproduzíveis",
+                "weight": 1.0,
+                "sprint_offer": "SPR-05 (On-Chain Data & BI Dashboard Sprint)",
+            },
+            {
+                "id": "CASE-06",
+                "name": "06 — Hybrid Cockpit & MCP / Org-Mode Bridge",
+                "demo": "Agente consulta GitHub, sincroniza bidirecionalmente com Emacs Org-mode e atualiza o grafo SCADA Cytoscape.js",
+                "cryptojob_proved": "Developer Tooling / AI Integration",
+                "repo": "compilatorum/eugencia-os + compilatorum/omni-dual-brain",
+                "level_L": 4,
+                "level_label": "L4 — Validado em Operação Real",
+                "weight": 1.0,
+                "sprint_offer": "SPR-10 (Developer Tooling & MCP Sprint)",
+            },
+        ]
+
+        sum_w = sum(c["weight"] for c in cases)
+        sum_wl = sum(c["weight"] * c["level_L"] for c in cases)
+        readiness_ratio = round(sum_wl / (5.0 * sum_w), 4)
+
+        return {
+            "formula": "Portfolio Readiness = sum(w_i * L_i) / (5 * sum(w_i))",
+            "readiness_ratio": readiness_ratio,
+            "readiness_pct": round(readiness_ratio * 100.0, 1),
+            "cases": cases,
+        }
+
+    def get_crm_pipeline_and_sprints(self) -> Dict[str, Any]:
+        sprints = [
+            {"code": "SPR-01", "name": "Technical Diagnostic & Roadmap Sprint", "scope": "Investigar problema, auditar repo e propor arquitetura", "deliverable": "Relatório de arquitetura + backlog + proposta", "price_range_brl": "R$ 300–800"},
+            {"code": "SPR-02", "name": "API & Webhook Integration Sprint", "scope": "Integrar uma API externa a um sistema existente", "deliverable": "Código conector, documentação e testes", "price_range_brl": "R$ 800–2.500"},
+            {"code": "SPR-03", "name": "AI Workflow & Copilot Sprint", "scope": "Automatizar um processo empresarial com IA e HITL", "deliverable": "Workflow LangGraph, schemas e demo E2E", "price_range_brl": "R$ 1.500–4.000"},
+            {"code": "SPR-04", "name": "RAG Knowledge System Sprint", "scope": "Criar base de conhecimento consultável (pgvector)", "deliverable": "Ingestão, busca híbrida e respostas com fontes", "price_range_brl": "R$ 2.000–5.000"},
+            {"code": "SPR-05", "name": "On-Chain Data & BI Dashboard Sprint", "scope": "Extrair e estruturar dados blockchain/operacionais", "deliverable": "Pipeline ETL, dataset SQL e dashboard", "price_range_brl": "R$ 1.500–4.000"},
+            {"code": "SPR-06", "name": "Agent Evaluation & QA Harness Sprint", "scope": "Avaliar comportamento e segurança de um agente", "deliverable": "Dataset de testes adversariais e relatório", "price_range_brl": "R$ 1.800–4.500"},
+            {"code": "SPR-07", "name": "ProofGate Readiness Sprint", "scope": "Mapear riscos e implantar guardrails determinísticos", "deliverable": "Threat model, políticas ProofGate e recibos SHA-256", "price_range_brl": "R$ 3.500–9.000"},
+            {"code": "SPR-08", "name": "DAO Governance Automation Sprint", "scope": "Automatizar etapa de propostas ou relatórios DAO", "deliverable": "Copiloto L0-L4, integração ou painel", "price_range_brl": "R$ 2.000–5.500"},
+            {"code": "SPR-09", "name": "Grant Intelligence & Stacking Sprint", "scope": "Mapear oportunidades e preparar dossiê WP1-WP5", "deliverable": "Matriz S(o) de oportunidades e dossiê técnico", "price_range_brl": "R$ 800–2.500"},
+            {"code": "SPR-10", "name": "Developer Tooling & MCP Sprint", "scope": "Criar CLI, SDK, servidor MCP ou template", "deliverable": "Pacote instalável, testes e quickstart", "price_range_brl": "R$ 1.500–4.500"},
+        ]
+        stages = ["Discover", "Qualify", "Scope", "Propose", "Contract", "Deliver", "Accept", "Invoice", "Learn"]
+
+        with self._connect() as conn:
+            # Ensure table has seed deals even if DB existed prior to upgrade
+            cnt = conn.execute("SELECT COUNT(*) AS c FROM crm_pipeline_deals").fetchone()["c"]
+            if cnt == 0:
+                ts = now_iso()
+                conn.executemany(
+                    "INSERT INTO crm_pipeline_deals VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                    [
+                        ("crm:001", "Vespa TCG — Operador WhatsApp + Catálogo + PIX", "Vespa TCG BH", "B2B Direct", "SPR-03", "Deliver", 86.5, 1, 1, 2650.0, "BRL_PIX", "Conector WhatsApp/MercadoPago + Guardrail Desconto ProofGate", ts),
+                        ("crm:002", "Solana Agent Policy Guardrail & Ed25519 Receipt SDK", "Superteam / Solana Ecosystem", "Superteam Earn", "SPR-07", "Propose", 84.0, 1, 1, 9000.0, "USDC", "SDK TypeScript Open Core (WP1) + Verificador SHA-256/Ed25519", ts),
+                        ("crm:003", "DAO Proposal Triage Copilot (L0-L4)", "Governaut DAO Ops", "Dework", "SPR-08", "Scope", 79.5, 1, 1, 5200.0, "USDC", "Template de Triagem Multi-Agente L0-L4 + Simulador de Risco", ts),
+                        ("crm:004", "Adversarial Prompt-Injection Benchmark Suite", "DeFi Treasury Guard", "Superteam Earn", "SPR-06", "Qualify", 77.0, 1, 1, 4500.0, "USDC", "Dataset de 50 ataques adversariais + Runner isolado em worktree", ts),
+                    ],
+                )
+            deals = [dict(r) for r in conn.execute("SELECT * FROM crm_pipeline_deals ORDER BY score_s DESC").fetchall()]
+
+        return {
+            "pipeline_stages": stages,
+            "commercialization_tiers": ["1. Diagnóstico Pago", "2. Sprint de Implementação", "3. Operação Gerenciada (MRR)"],
+            "sprints_catalog": sprints,
+            "deals": deals,
+            "portfolio_readiness": self.get_portfolio_readiness(),
+        }
+
+    def advance_crm_deal_stage(self, deal_id: str, target_stage: str, extracted_delta_s: Optional[str] = None) -> Dict[str, Any]:
+        valid_stages = ["Discover", "Qualify", "Scope", "Propose", "Contract", "Deliver", "Accept", "Invoice", "Learn"]
+        if target_stage not in valid_stages:
+            raise ValueError(f"Estágio CRM inválido: {target_stage}. Use um de {valid_stages}")
+
+        with self._connect() as conn:
+            # Ensure seed deals exist
+            self.get_crm_pipeline_and_sprints()
+            row = conn.execute("SELECT * FROM crm_pipeline_deals WHERE id = ?", (deal_id,)).fetchone()
+            if not row:
+                raise ValueError(f"Deal {deal_id} não encontrado")
+            if not row["passes_risk_gate"] or not row["passes_verified_budget_gate"]:
+                raise PermissionError("Deal bloqueado pelos filtros eliminatórios de Risco ou Orçamento Verificável.")
+            if target_stage == "Learn" and not (extracted_delta_s or row["reusable_delta_s"]):
+                raise ValueError("Estágio 'Learn' exige registrar o ativo reutilizável extraído (Delta S > 0).")
+
+            new_delta = extracted_delta_s if extracted_delta_s else row["reusable_delta_s"]
+            conn.execute(
+                "UPDATE crm_pipeline_deals SET stage = ?, reusable_delta_s = ?, updated_at = ? WHERE id = ?",
+                (target_stage, new_delta, now_iso(), deal_id),
+            )
+            return dict(conn.execute("SELECT * FROM crm_pipeline_deals WHERE id = ?", (deal_id,)).fetchone())

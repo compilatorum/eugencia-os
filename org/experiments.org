@@ -1,6 +1,6 @@
 #+TITLE: Eugência OS — Research & Experiment OS
 #+SUBTITLE: Agentic Selfware & Verifiable Service Engineering
-#+DATE: 2026-11-16T13:43:35Z
+#+DATE: 2026-11-16T18:55:49Z
 
 * 🔬 Questão Central
 Como transformar conhecimento, software e agentes de IA em serviços produtizados, preservando a autonomia criativa e assegurando qualidade, rastreabilidade e sustentabilidade econômica?

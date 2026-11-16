@@ -288,3 +288,92 @@ def test_bounded_contexts_and_fidelity_matrix(tmp_path):
     assert cal_low_risk["requires_human_approval"] is False
     assert cal_low_risk["operational_tier"] == "06_EXECUTE_AUTONOMOUS_WITHIN_LIMITS"
 
+
+def test_cryptojobs_opportunity_scoring_crm_and_readiness(tmp_path):
+    """
+    Verifies ChatGPT Cryptojobs & Career Architecture Upgrade:
+      1. 4 new operational documents (CRYPTOJOBS-MARKET-MAP.md, SERVICE-CATALOG.md, FREELANCER-PROFILE.md, OPPORTUNITY-SCORING.md)
+      2. Opportunity Compatibility Score S(o) = 0.25F + 0.20R + 0.20A + 0.15E + 0.10P + 0.10C + 2 Eliminatory Filters
+      3. Sprint Pricing Formula P = C_prod + C_risco + C_infra + M_desejada + T_plataforma
+      4. Portfolio Readiness metric across the 6 Proof-of-Work Showcase Cases (CASE-01..CASE-06)
+      5. 9-Stage CRM Pipeline progression (Discover -> Qualify -> Scope -> Propose -> Contract -> Deliver -> Accept -> Invoice -> Learn)
+    """
+    docs_dir = BASE_DIR / "docs" / "eugencia-os"
+    for new_doc in [
+        "CRYPTOJOBS-MARKET-MAP.md",
+        "SERVICE-CATALOG.md",
+        "FREELANCER-PROFILE.md",
+        "OPPORTUNITY-SCORING.md",
+    ]:
+        assert (docs_dir / new_doc).exists(), f"Missing {new_doc}"
+
+    engine = EugenciaEngine(db_path=tmp_path / "test_crm.db")
+
+    # 1. Opportunity Scoring S(o) with high compatibility
+    sc_ok = engine.score_opportunity(
+        fit_f=90.0,
+        remuneration_r=80.0,
+        accumulation_a=85.0,
+        ergonomics_e=80.0,
+        portfolio_p=90.0,
+        purpose_c=95.0,
+        passes_risk_gate=True,
+        passes_verified_budget_gate=True,
+    )
+    # 0.25*90 + 0.20*80 + 0.20*85 + 0.15*80 + 0.10*90 + 0.10*95 = 22.5 + 16 + 17 + 12 + 9 + 9.5 = 86.0
+    assert sc_ok["raw_score"] == 86.0
+    assert sc_ok["decision_status"] == "PRIORITY_EXECUTE"
+
+    # Kill-switch 1: fails risk gate (e.g. uncertified smart-contract formal audit or fund custody)
+    sc_risk = engine.score_opportunity(
+        fit_f=95.0,
+        remuneration_r=95.0,
+        accumulation_a=90.0,
+        ergonomics_e=80.0,
+        portfolio_p=90.0,
+        purpose_c=90.0,
+        passes_risk_gate=False,
+        passes_verified_budget_gate=True,
+    )
+    assert sc_risk["decision_status"] == "DISQUALIFIED_BY_RISK"
+    assert sc_risk["effective_score"] == 0.0
+
+    # Kill-switch 2: fails verified budget gate
+    sc_unverified = engine.score_opportunity(
+        fit_f=85.0,
+        remuneration_r=80.0,
+        accumulation_a=85.0,
+        ergonomics_e=80.0,
+        portfolio_p=80.0,
+        purpose_c=85.0,
+        passes_risk_gate=True,
+        passes_verified_budget_gate=False,
+    )
+    assert sc_unverified["decision_status"] == "UNVERIFIED_LEAD"
+
+    # 2. Sprint Price Quote P (with 10% LaborX escrow fee test)
+    quote = engine.calculate_sprint_price(
+        prod_cost_brl=1200.0,
+        risk_cost_brl=300.0,
+        infra_cost_brl=100.0,
+        target_margin_brl=1100.0,
+        platform_fee_pct=10.0,
+    )
+    assert quote["base_price_brl"] == 2700.0
+    assert quote["final_quoted_price_brl"] == 3000.0
+
+    # 3. Portfolio Readiness & 9-Stage CRM Pipeline
+    crm_data = engine.get_crm_pipeline_and_sprints()
+    assert len(crm_data["sprints_catalog"]) == 10
+    assert len(crm_data["pipeline_stages"]) == 9
+    assert len(crm_data["portfolio_readiness"]["cases"]) == 6
+    assert crm_data["portfolio_readiness"]["readiness_pct"] == 57.1
+
+    advanced = engine.advance_crm_deal_stage(
+        deal_id="crm:001",
+        target_stage="Learn",
+        extracted_delta_s="Conector genérico WhatsApp + Teste E2E ProofGate extraído para o VOS",
+    )
+    assert advanced["stage"] == "Learn"
+
+

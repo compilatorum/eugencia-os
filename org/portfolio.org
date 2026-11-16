@@ -1,10 +1,10 @@
 #+TITLE: Eugência OS — Portfolio OS (72 Repositórios & KPIs)
-#+DATE: 2026-11-16T13:43:35Z
+#+DATE: 2026-11-16T18:55:49Z
 
 * 📊 Indicadores Executivos da Eugência (E = H + S + A + G)
 - *Score da Eugência (E):* 95.5 / 100
 - *MRR Atual:* R$ 3100.00 (3 clientes ativos)
-- *Margem de Contribuição (MC):* R$ 2340.77 (75.5%)
+- *Margem de Contribuição (MC):* R$ 2340.75 (75.5%)
 - *Alavancagem Recorrente (L = MRR / Horas):* R$ 95.38 / hora humana
 - *Eficiência Computacional (rho = MRR / C_var):* 4.08x
 - *Regra WIP Comercial <= 2:* 2/2 (value-curator, card-chat)

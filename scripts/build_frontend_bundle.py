@@ -30,6 +30,7 @@ def build_bundle() -> None:
         "receipts": engine.list_proofgate_receipts(),
         "inbox": engine.list_flow_inbox(),
         "opportunities_data": engine.list_opportunities(),
+        "crm_data": engine.get_crm_pipeline_and_sprints(),
         "research": engine.get_research_and_publishing(),
         "docs": engine.list_strategic_docs(),
     }
@@ -676,7 +677,7 @@ def build_bundle() -> None:
         <div class="panel">
           <div class="panel-header">
             <div class="panel-title">🎯 Opportunity Intelligence CRM (Superteam, Gitcoin, Dework/GitHub & Clientes B2B)</div>
-            <span class="formula-pill">Project &rarr; FundingThesis &rarr; Opportunity &rarr; WorkPackage &rarr; Evidence &rarr; Funding</span>
+            <span class="formula-pill">S(o) = 0.25F + 0.20R + 0.20A + 0.15E + 0.10P + 0.10C</span>
           </div>
           <table>
             <thead>
@@ -713,6 +714,47 @@ def build_bundle() -> None:
               </tr>
             </thead>
             <tbody id="wps-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">📈 Pipeline CRM da Eugência (9 Estágios: Discover &rarr; Learn) & Duplo Pagamento (&Delta;S)</div>
+            <span class="formula-pill">Eugência = Selfware + Serviços + Gigs</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Deal / Cliente</th>
+                <th>Canal</th>
+                <th>Sprint</th>
+                <th>Score S(o)</th>
+                <th>Estágio CRM</th>
+                <th>Preço</th>
+                <th>Ativo Reutilizável Extraído (&Delta;S)</th>
+              </tr>
+            </thead>
+            <tbody id="crm-deals-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">🧪 Vitrine Proof-of-Work (6 Cases Demonstrativos & Portfolio Readiness)</div>
+            <span class="formula-pill" id="readiness-pill">Portfolio Readiness: 57.1%</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Criptojob Comprovado</th>
+                <th>Maturidade (L0–L5)</th>
+                <th>Sprint Associado</th>
+              </tr>
+            </thead>
+            <tbody id="pow-cases-tbody"></tbody>
           </table>
         </div>
       </div>
@@ -1149,6 +1191,39 @@ def build_bundle() -> None:
           <td>${{w.target_funder}} (R$ ${{w.amount_brl.toLocaleString('pt-BR')}})</td>
         </tr>
       `).join('');
+
+      if (STATE.crm_data) {{
+        const crmTbody = document.getElementById('crm-deals-tbody');
+        if (crmTbody) {{
+          crmTbody.innerHTML = STATE.crm_data.deals.map(d => `
+            <tr>
+              <td><b>${{d.title}}</b><br/><span style="font-size:11px; color:var(--text-2);">${{d.client_or_dao}}</span></td>
+              <td>${{d.source_channel}}</td>
+              <td><code>${{d.sprint_code}}</code></td>
+              <td><span class="badge badge-emerald">${{d.score_s}}</span></td>
+              <td><span class="badge badge-cyan">${{d.stage}}</span></td>
+              <td><b>${{d.price_brl.toLocaleString('pt-BR')}} (${{d.currency}})</b></td>
+              <td style="font-size:11px;">${{d.reusable_delta_s}}</td>
+            </tr>
+          `).join('');
+        }}
+        const pr = STATE.crm_data.portfolio_readiness;
+        if (pr) {{
+          const rPill = document.getElementById('readiness-pill');
+          if (rPill) rPill.textContent = `Portfolio Readiness: ${{pr.readiness_pct}}%`;
+          const powTbody = document.getElementById('pow-cases-tbody');
+          if (powTbody) {{
+            powTbody.innerHTML = pr.cases.map(c => `
+              <tr>
+                <td><b>${{c.name}}</b><br/><span style="font-size:11px; color:var(--text-2);">${{c.demo}}</span></td>
+                <td>${{c.cryptojob_proved}}</td>
+                <td><span class="badge badge-purple">${{c.level_label}}</span></td>
+                <td><code>${{c.sprint_offer}}</code></td>
+              </tr>
+            `).join('');
+          }}
+        }}
+      }}
 
       const etbody = document.getElementById('exps-tbody');
       etbody.innerHTML = STATE.research.experiments.map(e => `

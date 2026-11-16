@@ -1,6 +1,6 @@
 #+TITLE: Eugência OS — Flow Inbox (Divergência <-> Convergência)
 #+AUTHOR: João Nitzsche (Compilatorum / ValueCurator)
-#+DATE: 2026-11-16T13:43:35Z
+#+DATE: 2026-11-16T18:55:49Z
 #+STARTUP: overview
 #+TODO: FLOW(f) CURATED(c) IN_EXECUTION(e) | PROMOTED(p) PARKED(k) DONE(d)
 
